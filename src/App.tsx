@@ -4,14 +4,16 @@ import { Route, BrowserRouter } from 'react-router-dom'
 import { NewRoom } from './pages/NewRoom'
 import GlobalStyle from './styles/global'
 import theme from './styles/themes/theme'
-
+import { AuthContextProvider } from './context/AuthCxt'
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <BrowserRouter>
-        <Route path="/" exact component={Home} />
-        <Route path="/rooms/new" exact component={NewRoom} />
+        <AuthContextProvider>
+          <Route path="/" exact component={Home} />
+          <Route path="/rooms/new" exact component={NewRoom} />
+        </AuthContextProvider>
       </BrowserRouter>
     </ThemeProvider>
   )

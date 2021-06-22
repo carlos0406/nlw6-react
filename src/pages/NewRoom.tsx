@@ -3,10 +3,19 @@ import { Button } from '../components/Button'
 import logoImg from '../assets/logo.svg'
 import illustrationImg from '../assets/illustration.svg'
 import { Link } from 'react-router-dom'
+import { useAuth } from '../hooks/useAuth'
 export function NewRoom() {
+  const { user } = useAuth()
   return (
     <Container>
       <aside>
+        <div className="profile">
+          <img src={user?.avatar} className="avatar" />
+          <h1>
+            Bem vindo, <br />
+            {user?.name}
+          </h1>
+        </div>
         <img
           src={illustrationImg}
           alt="Ilustração representando perguntas e respostas"

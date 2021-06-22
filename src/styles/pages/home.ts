@@ -27,6 +27,25 @@ export const Container = styled.div`
       line-height: 2rem;
     }
   }
+  .profile {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 1rem;
+    display: flex;
+    flex: 1;
+    border-bottom: 1px solid ${props => props.theme.colors.textWhite};
+    .avatar {
+      width: 6rem;
+      border-radius: 20%;
+      box-shadow: 2px 6px 6px black;
+      border: 1px solid ${props => props.theme.colors.textWhite};
+    }
+    h1 {
+      margin-left: 1rem;
+      width: 15rem;
+    }
+  }
   main {
     flex: 8;
     padding: 0 2rem;
