@@ -1,9 +1,16 @@
 import styled from 'styled-components'
-
+export const Header = styled.div`
+  display: flex;
+  height: 3rem;
+  border-bottom: 1px solid ${props => props.theme.colors.lightGray};
+  width: 100%;
+  background: ${props => props.theme.colors.purple};
+  filter: brightness(0.8);
+`
 export const Container = styled.div`
   display: flex;
   align-items: stretch;
-  height: 100vh;
+  height: calc(100vh - 3rem - 1px);
   aside {
     display: flex;
     flex: 7;

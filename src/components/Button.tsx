@@ -2,7 +2,6 @@ import { ButtonHTMLAttributes } from 'react'
 
 import styled from 'styled-components'
 const PurpleButton = styled.button`
-  margin-top: 4rem;
   height: 3rem;
   border-radius: 0.5rem;
   font-weight: 500;
@@ -15,6 +14,7 @@ const PurpleButton = styled.button`
   cursor: pointer;
   border: 0;
   transition: filter 0.2s;
+  padding: 1rem 2rem;
 
   &:not(:disabled):hover {
     filter: brightness(0.8);
