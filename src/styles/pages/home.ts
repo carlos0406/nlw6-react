@@ -2,10 +2,23 @@ import styled from 'styled-components'
 export const Header = styled.div`
   display: flex;
   height: 3rem;
+  align-items: center;
   border-bottom: 1px solid ${props => props.theme.colors.lightGray};
   width: 100%;
   background: ${props => props.theme.colors.purple};
   filter: brightness(0.8);
+  span {
+    font-weight: 500;
+    margin: 0 1rem;
+    color: ${props => props.theme.colors.textWhite};
+  }
+  div.date {
+    font-weight: 500;
+    margin-left: auto;
+    color: ${props => props.theme.colors.textWhite};
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
 `
 export const Container = styled.div`
   display: flex;
@@ -42,12 +55,6 @@ export const Container = styled.div`
     display: flex;
     flex: 1;
     border-bottom: 1px solid ${props => props.theme.colors.textWhite};
-    .avatar {
-      width: 6rem;
-      border-radius: 20%;
-      box-shadow: 2px 6px 6px black;
-      border: 1px solid ${props => props.theme.colors.textWhite};
-    }
     h1 {
       margin-left: 1rem;
       width: 15rem;

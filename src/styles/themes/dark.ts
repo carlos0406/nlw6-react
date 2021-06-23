@@ -1,11 +1,13 @@
 export default {
   title: 'dark',
   colors: {
-    background: '#000',
-    text: '#29292E',
+    background: '#191622',
+    text: '#E96379',
     textWhite: '#FFF',
-    purple: '#835afd',
+    purple: '#483C67',
     lightGray: '#A8A8B3',
-    red: '#ea4335'
+    red: '#ea4335',
+    shadow: '#e8b3bb',
+    buttonlink: '#E06379'
   }
 }

@@ -7,9 +7,8 @@ import GlobalStyle from './styles/global'
 import Theme from './styles/themes/theme'
 import Dark from './styles/themes/dark'
 import { AuthContextProvider } from './context/AuthCxt'
-import { SwitchTheme } from './components/Switch'
+import { SwitchTheme } from './components/HeaderSwitch'
 import usePersistedState from './hooks/usePersistedState'
-import { Header } from './styles/pages/home'
 
 function App() {
   const [theme, setTheme] = usePersistedState('theme', Theme)
@@ -18,9 +17,7 @@ function App() {
   }
   return (
     <ThemeProvider theme={theme}>
-      <Header>
-        <SwitchTheme toggleTheme={toggleTheme} />
-      </Header>
+      <SwitchTheme toggleTheme={toggleTheme} />
       <GlobalStyle />
       <BrowserRouter>
         <AuthContextProvider>

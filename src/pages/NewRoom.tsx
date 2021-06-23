@@ -26,13 +26,6 @@ export function NewRoom() {
   return (
     <Container>
       <aside>
-        <div className="profile">
-          <img src={user?.avatar} className="avatar" />
-          <h1>
-            Bem vindo, <br />
-            {user?.name}
-          </h1>
-        </div>
         <img
           src={illustrationImg}
           alt="Ilustração representando perguntas e respostas"

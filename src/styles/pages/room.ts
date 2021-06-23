@@ -14,7 +14,7 @@ export const Container = styled.div`
         padding: 1rem;
         border: 0;
         border-radius: 0.5rem;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        box-shadow: 0 2px 12px ${props => props.theme.colors.shadow};
         resize: vertical;
         min-height: 12rem;
       }
@@ -35,7 +35,7 @@ export const Container = styled.div`
       h1 {
         font-family: 'Poppins';
         font-size: 1.5rem;
-        color: #29292e;
+        color: ${props => props.theme.colors.text};
       }
       span {
         margin-left: 1rem;
@@ -80,7 +80,7 @@ export const ButtonContent = styled.span`
   button {
     background: transparent;
     border: 0;
-    color: ${props => props.theme.colors.purple};
+    color: ${props => props.theme.colors.buttonlink};
     text-decoration: underline;
     font-size: 0.975rem;
     font-weight: 500;

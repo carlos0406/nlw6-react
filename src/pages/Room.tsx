@@ -107,14 +107,14 @@ export function Room() {
             placeholder="O que você quer perguntar?"
           />
           <div>
-            {user ? (
+            {!user ? (
               <UserInfo>
                 <img src={user.avatar} alt="Foto do usuario" />
                 <span>{user.name}</span>
               </UserInfo>
             ) : (
               <ButtonContent>
-                Para enviar uma pergunta,{' '}
+                Para enviar uma pergunta ,
                 <button type="button" onClick={singInWithGoogle}>
                   faça seu login
                 </button>
