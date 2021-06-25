@@ -8,6 +8,8 @@ export default {
     lightGray: '#A8A8B3',
     red: '#ea4335',
     shadow: '#d3d3ed',
-    buttonlink: '#835afe'
+    buttonlink: '#835afe',
+    questionbg: '#FEFEFE',
+    disable: '#191612'
   }
 }

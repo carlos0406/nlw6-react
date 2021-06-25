@@ -9,6 +9,7 @@ import Dark from './styles/themes/dark'
 import { AuthContextProvider } from './context/AuthCxt'
 import { SwitchTheme } from './components/HeaderSwitch'
 import usePersistedState from './hooks/usePersistedState'
+import { AdminRoom } from './pages/AdminRoom'
 
 function App() {
   const [theme, setTheme] = usePersistedState('theme', Theme)
@@ -25,6 +26,7 @@ function App() {
             <Route path="/" exact component={Home} />
             <Route path="/rooms/new" component={NewRoom} />
             <Route path="/rooms/:id" component={Room} />
+            <Route path="/admin/rooms/:id" component={AdminRoom} />
           </Switch>
         </AuthContextProvider>
       </BrowserRouter>

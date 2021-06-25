@@ -6,6 +6,11 @@ const PurpleButton = styled.button`
   border-radius: 0.5rem;
   font-weight: 500;
   background: ${props => props.theme.colors.purple};
+  &.outilined {
+    background: #fff;
+    border: 1px solid ${props => props.theme.colors.purple};
+    color: ${props => props.theme.colors.purple};
+  }
   color: ${props => props.theme.colors.textWhite};
 
   display: flex;
@@ -25,7 +30,11 @@ const PurpleButton = styled.button`
     cursor: not-allowed;
   }
 `
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
-export function Button(props: ButtonProps) {
-  return <PurpleButton {...props} />
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  isOutlined?: boolean
+}
+export function Button({ isOutlined = false, ...props }: ButtonProps) {
+  return (
+    <PurpleButton className={`${isOutlined ? 'outilined' : ''}`} {...props} />
+  )
 }

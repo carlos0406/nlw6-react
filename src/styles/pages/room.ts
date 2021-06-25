@@ -27,7 +27,7 @@ export const Container = styled.div`
       }
     }
 
-    > div {
+    div.header {
       margin: 2rem 0 1.5rem;
       display: flex;
       align-items: center;
@@ -44,6 +44,7 @@ export const Container = styled.div`
         padding: 0.5rem 1rem;
         font-weight: 500;
         font-size: 0.95rem;
+        color: ${props => props.theme.colors.textWhite};
       }
     }
   }
@@ -56,6 +57,13 @@ export const Content = styled.div`
   align-items: center;
   > img {
     max-height: 3rem;
+  }
+  div {
+    display: flex;
+    gap: 1rem;
+    button {
+      height: 2.5rem;
+    }
   }
 `
 export const UserInfo = styled.div`
@@ -85,4 +93,7 @@ export const ButtonContent = styled.span`
     font-size: 0.975rem;
     font-weight: 500;
   }
+`
+export const QuestionsList = styled.div`
+  margin-top: 2rem;
 `
